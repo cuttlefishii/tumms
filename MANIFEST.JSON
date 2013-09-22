@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Tumblr multi-tag search",
+  "description": "This extension allows you to search tumblr for images using multiple 
+				  tags as search query",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "multisearch.html"
+  },
+  "permissions": [
+	"tabs",
+    "http://www.tumblr.com/*"
+  ]
+}
