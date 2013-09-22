@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	var on_click = document.getElementById('on_click');
 	
 	on_click.addEventListener('click', function(){
-		make_search_strings();
+		var string_array = make_search_strings();
+		search_first_tag(string_array);
 	});
 
 	function make_search_strings(){
@@ -32,10 +33,11 @@ document.addEventListener('DOMContentLoaded', function() {
 				++j;
 			}
 		}
-		document.getElementById('thisisfortests').innerHTML = '';
-		for(var k=0; k < fixed_split_array.length; ++k){
-			document.getElementById('thisisfortests').innerHTML += (fixed_split_array[k] + "<br>");
-		};
-
+		return fixed_split_array;
 	};
+	function search_first_tag(fixed_split_array){
+		var tag_one = fixed_split_array[0].substring(1);
+		//document.getElementById('thisisfortests').innerHTML += (tag_one + "<br>");
+		chrome.tabs.create({'url': 'http://www.tumblr.com/tagged/' + tag_one}, function(tab){});
+	}
 });
