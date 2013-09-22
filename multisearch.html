@@ -9,26 +9,26 @@
 	body{
 		min-width: 200 px;
 		overflow-x: hidden;
-		background-color: #33506e; 
-		color: #FFFFFF;
-
+		background-color: #33506e;
+		color: #FFF;
 	}
 	h3{
-		color: #FFFFFF ;
+		color: #FFF;
 		text-align: center;
 	}
 </style>
-<script src="multsearch.js"></script>
+<script type="text/javascript" src="multisearch.js"></script>
 </head>
 <body>
-	<div id= 'poppingup' style= "width: 250px">
-	<div id="title"> <h3>Tumblr Multi-Search</h3> </div>
+	<div id="title">Tumblr Multi-Search</div>
+	<div id="poppingup" style="width: 250px">
+	<div id="title"><h3>Tumblr Multi-Search</h3></div>
 	<div id="description">Enter the tags you would like to search separated by a # and
 		space.<br>
-		(ie: #corgi puppies #kittens)</br></br></div>
-	<form>
+		(ie: #corgi puppies #kittens)<br><br></div>
+	<form id="multisearch">
 	<input type="text" id="search_params" name="search_params"><br>
-	<input type="submit" value="Submit">
+	<input type="button" value="Search" id="on_click">
 	</form>
 	<div id="thisisfortests"></div></div>
 </body>
